@@ -1,0 +1,31 @@
+# Generated experiment artifacts
+data/**
+!data/.gitkeep
+runs/**
+!runs/.gitkeep
+figures/**
+!figures/.gitkeep
+logs/**
+!logs/.gitkeep
+
+# Optional read-only upstream checkout. It is not part of this repository.
+ulterior-motives/
+
+# Build / editable-install artifacts
+*.egg-info/
+build/
+dist/
+__pycache__/
+*.py[cod]
+
+# Local environments and tools
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+.claude/
