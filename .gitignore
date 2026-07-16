@@ -1,4 +1,7 @@
 # Generated experiment artifacts
+references/**
+!references/.gitkeep
+!references/refs.yaml
 data/**
 !data/.gitkeep
 runs/**

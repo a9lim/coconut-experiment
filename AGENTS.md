@@ -22,6 +22,7 @@ coconut-experiment/
 ├── docs/
 │   ├── design.md       # source of truth, hypotheses, and status
 │   └── runbook.md      # current 4090 execution sequence
+├── references/         # refs.yaml (committed) + fetched paper copies (ignored)
 ├── scripts/            # orchestration and future one-off entry points
 ├── data/                # generated corpora
 ├── runs/                # local checkpoints
