@@ -1,6 +1,10 @@
 # Latent reasoning vs. CoT: does it reward-hack more readily, and more covertly?
 
-**Status:** design sketch · **Last updated:** 2026-06-15
+**Status:** pilot findings; full Coconut validity gate pending · **Last updated:** 2026-07-28
+
+For the current evidence summary and claim boundary, start with
+[`findings.md`](findings.md). The implementation ledger below preserves the
+chronology and exploratory detail.
 
 ## Thesis
 

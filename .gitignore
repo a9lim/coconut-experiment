@@ -4,10 +4,15 @@ references/**
 !references/refs.yaml
 data/**
 !data/.gitkeep
+!data/summary/
+!data/summary/**
 runs/**
 !runs/.gitkeep
 figures/**
 !figures/.gitkeep
+!figures/README.md
+!figures/public/
+!figures/public/**
 logs/**
 !logs/.gitkeep
 

@@ -9,6 +9,14 @@ runbook.
 See [`docs/design.md`](docs/design.md) for the research design and
 [`docs/runbook.md`](docs/runbook.md) for the current execution sequence.
 
+**Current status:** the explicit-CoT baseline and continuous-carrier pilot have
+results; the full Coconut latent validity gate has not run. The study therefore
+does **not** yet support a CoT-vs-Coconut acquisition or monitorability
+comparison. See [`docs/findings.md`](docs/findings.md) for the defensible
+findings and limitations, [`data/summary/results.json`](data/summary/results.json)
+for the compact results, and [`figures/public/`](figures/public/) for the
+public plots.
+
 This is a research repo, not a library. There is no public API or PyPI release.
 The installable package exists so the experiment has an isolated namespace in
 the shared workspace Python.
@@ -40,10 +48,11 @@ python -m coconut_experiment.cheatchain --selfcheck
 coconut_experiment/  CheatChain generator and matched CoT/latent harnesses
 scripts/              orchestration and one-off entry points
 data/                 generated corpora (local, gitignored)
+  summary/             compact public result tables
 runs/                 checkpoints (local, gitignored)
-figures/              generated analysis figures
+figures/              tracked public plots; exploratory outputs stay local
 logs/                 local run logs
-docs/                 design, status, and runbook
+docs/                 findings, design, status, and runbook
 ulterior-motives/     optional read-only upstream checkout (local, gitignored)
 ```
 

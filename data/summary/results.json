@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "evidence_cutoff": "2026-06-17",
+  "status": "pilot-findings-full-coconut-gate-pending",
+  "cot": {
+    "validity_gate": {
+      "seed_count": 1,
+      "evaluation_n": 2000,
+      "clean_exact_match": 1.0
+    },
+    "acquisition_curve": [
+      {"cue_fraction": 0.0, "evaluation_n": 2000, "conflict_hack_rate": 0.0, "conflict_honest_rate": 1.0},
+      {"cue_fraction": 0.1, "evaluation_n": 2000, "conflict_hack_rate": 0.0, "conflict_honest_rate": 1.0},
+      {"cue_fraction": 0.25, "evaluation_n": 2000, "conflict_hack_rate": 0.0, "conflict_honest_rate": 1.0},
+      {"cue_fraction": 0.5, "evaluation_n": 2000, "conflict_hack_rate": 0.082, "conflict_honest_rate": 0.912},
+      {"cue_fraction": 0.75, "evaluation_n": 2000, "conflict_hack_rate": 0.28, "conflict_honest_rate": 0.691},
+      {"cue_fraction": 0.9, "evaluation_n": 2000, "conflict_hack_rate": 0.585, "conflict_honest_rate": 0.375},
+      {"cue_fraction": 1.0, "evaluation_n": 2000, "conflict_hack_rate": 1.0, "conflict_honest_rate": 0.0}
+    ]
+  },
+  "coconut_latent_scout": {
+    "seed_count": 1,
+    "evaluation_n": 500,
+    "clean_accuracy": 0.088,
+    "training_budget": "one epoch per stage; reduced scout",
+    "interpretation": "placeholder collapse in the reduced-budget scout; full-budget outcome unresolved"
+  },
+  "continuous_carrier": {
+    "clean_gate": {
+      "evaluation_n": 500,
+      "self_fed_accuracy": 1.0,
+      "professor_forced_agreement": 1.0
+    },
+    "fully_cued_hack_arm": {
+      "evaluation_n": 500,
+      "conflict_hack_rate": 1.0,
+      "cue_flip_reliance": 1.0,
+      "no_hint_clean_accuracy": 0.088,
+      "source_cot_no_hint_clean_accuracy": 0.647
+    },
+    "answer_head_frontier": [
+      {"setting": "frozen_base", "evaluation_n": 160, "hack_rate": 0.694, "readout_honesty": 0.744, "chain_kl": 0.0},
+      {"setting": "kl_beta_10", "evaluation_n": 80, "hack_rate": 0.9, "readout_honesty": 0.65, "chain_kl": 0.0095, "joint_lower_bound": 0.55},
+      {"setting": "kl_beta_3", "evaluation_n": 80, "hack_rate": 1.0, "readout_honesty": 0.2, "chain_kl": 0.115},
+      {"setting": "kl_beta_1", "evaluation_n": 80, "hack_rate": 0.975, "readout_honesty": 0.087, "chain_kl": 0.5559}
+    ]
+  },
+  "claim_boundary": [
+    "one seed per reported training cell",
+    "continuous carrier is not Coconut",
+    "full-budget Coconut validity gate not run",
+    "no CoT-vs-Coconut acquisition or monitorability conclusion"
+  ],
+  "sources": [
+    "runs/gate.log",
+    "runs/pcue100.log",
+    "runs/sweep.log",
+    "runs/latent-gate-scout.log",
+    "runs/gate-stream/distill.log",
+    "runs/pcue100-stream/distill.log",
+    "runs/p25-stream-rl-frozen/rl.log",
+    "runs/p25-rlv-b10/rl.log",
+    "runs/p25-rlv-b3/rl.log",
+    "runs/p25-rlv-b1/rl.log"
+  ]
+}
