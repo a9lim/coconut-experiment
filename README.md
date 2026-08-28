@@ -24,8 +24,8 @@ the shared workspace Python.
 ## Install
 
 ```bash
-python --version  # shared base Python 3.12
-python -m pip install -e .
+python --version  # shared venv Python 3.12
+uv pip install -e .
 ```
 
 The latent data adapter expects a read-only checkout of the upstream reference
