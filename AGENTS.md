@@ -20,8 +20,6 @@ Full design, prior-work map, and decisions: **`docs/design.md`**
 (read it first — it's the source of truth; this file is the operational guide).
 Implementation status lives in that doc's "Implementation status" section.
 
-`CLAUDE.md` contains `@AGENTS.md`. Edit `AGENTS.md`, not the pointer file.
-
 ## Layout
 
 ```
